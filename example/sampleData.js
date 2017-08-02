@@ -2,7 +2,9 @@ import faker from 'faker'
 
 function generateSampleData() {
   const branches = {
-    salesorders: generateItems([['arInvoices']])
+    salesorders: generateItems([['arInvoices']]),
+    purchaseOrders: generateItems([['apInvoices']]),
+    jobs: generateItems([['elements', 'kits']])
   }
   return branches
 }
@@ -35,5 +37,9 @@ export function copyOneLevel(source) {
 export const sampleData = generateSampleData()
 export const categoryLabels = {
   salesorders: 'Sales Orders',
-  arInvoices: 'AR Invoices'
+  arInvoices: 'AR Invoices',
+  purchaseOrders: 'Purchase Orders',
+  jobs: 'Jobs',
+  elements: 'Elements',
+  kits: 'Kits',
 }
