@@ -14,7 +14,7 @@ function generateItems(subs) {
   for(let i=0; i < 5; i++) {
     const item = {
       id: i,
-      title: faker.address.city() + ' - ' + faker.company.companyName() + ' - ' + faker.name.jobArea(),
+      title: faker.finance.account() + ' - ' + faker.hacker.adjective(),
     }
     if(subs.length) {
       item.branches = {}

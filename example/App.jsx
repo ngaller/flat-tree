@@ -43,7 +43,7 @@ class App extends React.Component {
       this._setItem(category, item.id, {loading: true})
       setTimeout(() => {
         this._setItem(category, item.id, {loading: false, branches: copyOneLevel(sourceItem.branches)})
-      }, 5000)
+      }, 2000)
     }
   }
 

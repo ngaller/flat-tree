@@ -2,8 +2,44 @@
  * CSS for the example app
  */
 
-html, body, .outer {
-  margin: 0;
-  height: 100%;
-}
 
+.explorer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.explorer ul.top-structure {
+  width: 80%;
+}
+.explorer li {
+  background-color: white;
+  display: inline-block;
+  box-shadow: inset 0px 0px 0px 1px #333;
+  padding: 10px;
+  margin: 3px 2px;
+  border-radius: 3px;
+}
+.explorer span {
+  display: block;
+}
+.explorer .selected {
+  box-shadow: inset 0px 0px 0px 2px blue;
+}
+.explorer .level {
+  padding-left: 40px;
+}
+.explorer .elements:before {
+  content: "\f121";
+  font-family: FontAwesome;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 50%;
+}
+.explorer .kits:before {
+  content: "\f0b1";
+  font-family: FontAwesome;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 50%;
+}

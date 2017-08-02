@@ -1,20 +1,40 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Node from './Node'
-import FlatTree from './FlatTree'
+import React, { Component } from 'react';
+import Node from './Node.js'
 
-const Branch = ({name, nodes, categoryLabels}) => {
-  return <div className='branch'>
-    <div className='nodes'>
-      {nodes.map(item => <Node item={item} key={item.id} />)}
-    </div>
-    <div className='sub-branch'>
-      {nodes.map(item => item.branches && <FlatTree key={item.id} branches={item.branches} categoryLabels={categoryLabels} />)}
-    </div>
-  </div>
-}
-Branch.propTypes = {
-  nodes: PropTypes.array.isRequired
+class Branch extends Component {
+
+  renderNodes() {
+    return this.props.nodes.map(n => {
+      return <Node item={n} category={this.props.name} open={this.props.open}/>
+    });
+  }
+
+  renderBranch() {
+
+    this.props.nodes.map(n => {
+      if (n.branches !== undefined) {
+        console.log(n)
+        return 'Test';
+      } else {
+        return;
+      }
+    })
+  }
+
+  render() {
+    // console.log(this.props)
+    return (
+      <div>
+        {this.props.label}
+        <ul>{this.renderNodes()}
+          <ul>{this.renderBranch()}</ul>
+        </ul>
+
+      </div>
+
+    );
+  }
+
 }
 
-export default Branch
+export default Branch;

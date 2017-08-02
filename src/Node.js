@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Node = ({item}) =>
-  <div className='item'>
+const Node = ({item, open, category}) =>
+  <li className='item' onClick={() => open(category, item)}>
     {item.title}
-  </div>;
+  </li>;
 
 export default Node
