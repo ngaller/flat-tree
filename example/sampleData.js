@@ -38,6 +38,7 @@ export const sampleData = generateSampleData()
 export const categoryLabels = {
   salesorders: 'Sales Orders',
   arInvoices: 'AR Invoices',
+  apInvoices: 'AP Invoices',
   purchaseOrders: 'Purchase Orders',
   jobs: 'Jobs',
   elements: 'Elements',

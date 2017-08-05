@@ -39,11 +39,11 @@ class App extends React.Component {
   openItem(category, item) {
     const sourceItem = findSourceItem(sampleData, category, item.id)
     // console.log('findSourceItem', sourceItem)
-    if(sourceItem.branches) {
+    if(sourceItem && sourceItem.branches) {
       this._setItem(category, item.id, {loading: true})
       setTimeout(() => {
         this._setItem(category, item.id, {loading: false, branches: copyOneLevel(sourceItem.branches)})
-      }, 2000)
+      }, 500)
     }
   }
 
