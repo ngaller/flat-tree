@@ -14,7 +14,6 @@ class Branch extends Component {
     if(!this.props.nodes) return;
     return this.props.nodes.map(n => {
       if (n.branches !== undefined) {
-        let branch = Object.values(n.branches)
         return Object.keys(n.branches).map(k => {
           return <FlatTree branches={n.branches} categoryLabels={this.props.categoryLabels} onOpenItem={this.props.onOpenItem} />
         });

@@ -2,6 +2,8 @@ import React from 'react'
 import FlatTree from '../src/index'
 import {sampleData, categoryLabels, copyOneLevel} from './sampleData.js'
 
+console.log(sampleData)
+
 import { cloneDeep } from "lodash";
 
 // perform DFS to find an item in the tree

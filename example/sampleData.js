@@ -16,10 +16,10 @@ function generateItems(subs) {
       id: i,
       title: faker.finance.account() + ' - ' + faker.hacker.adjective(),
     }
-    if(subs.length) {
+    if(subs[0].length) {
       item.branches = {}
       for(let v of subs) {
-        item.branches[v[0]] = generateItems(v.slice(1))
+        item.branches[v[0]] = generateItems([v.slice(1)])
       }
     }
     items.push(item)
