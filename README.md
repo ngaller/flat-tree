@@ -14,7 +14,6 @@ Props
  * `categoryLabels`: map category name to labels
  * `onItemSelected`: a function that will be invoked when the user selects an item.
  * `onOpenItem`: a function that will be invoked when the user opens an item.  This should trigger a loading mechanism for that item.  The function will be called with the category key, and the item (the item should not be modified directly)
- * `onCloseItem`: a function that will be invoked when the user closes an item.
  * `children`: the component's child will be used as the detail view, when a user selects an item
 
 Example
