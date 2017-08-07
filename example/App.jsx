@@ -14,7 +14,7 @@ function findSourceItem(root, category, id) {
   } else {
     for(let k in root) {
       for(let subItem of root[k]) {
-        if(subItem.branches && subItem.branches.length) {
+        if(subItem.branches) {
           const result = findSourceItem(subItem.branches, category, id)
           if(result)
             return result
@@ -38,7 +38,6 @@ class App extends React.Component {
 
   openItem(category, item) {
     const sourceItem = findSourceItem(sampleData, category, item.id)
-    // console.log('findSourceItem', sourceItem)
     if(sourceItem && sourceItem.branches) {
       this._setItem(category, item.id, {loading: true})
       setTimeout(() => {
