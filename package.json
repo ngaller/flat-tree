@@ -1,6 +1,6 @@
 {
   "author": "Results Theory",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Visual representation of a dynamically loaded tree with very long, flat branches",
   "keywords": [
     "react",
