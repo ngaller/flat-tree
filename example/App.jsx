@@ -69,6 +69,7 @@ class App extends React.Component {
     return (
       <div>
         <FlatTree
+          className='explorer'
           branches={prepareTree(sampleData, this.state.openItems, this.state.loadingItems)}
           categoryLabels={categoryLabels}
           onOpenItem={this.openItem.bind(this)}

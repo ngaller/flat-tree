@@ -1,0 +1,30 @@
+/*
+ * CSS for the example app
+ */
+
+.flatTree {
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    ul.top-structure {
+        width: 80%;
+    }
+    li {
+        background-color: white;
+        display: inline-block;
+        box-shadow: inset 0px 0px 0px 1px #333;
+        padding: 10px;
+        margin: 3px 2px;
+        border-radius: 3px;
+    }
+    span {
+        display: block;
+    }
+    :global(.selected) {
+        box-shadow: inset 0px 0px 0px 2px blue;
+    }
+    :global(.level) {
+        padding-left: 40px;
+    }
+}

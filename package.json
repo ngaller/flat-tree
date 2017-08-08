@@ -19,18 +19,20 @@
   "scripts": {
     "lint": "node_modules/.bin/eslint --ext .js .",
     "clean": "rm -rf dist",
-    "build:cjs": "babel src --out-dir dist",
+    "build:cjs": "babel src --out-dir dist && echo 'require(\"./combined.css\")' >> ./dist/index.js",
     "build": "npm run clean && npm run build:cjs",
     "prepublishOnly": "npm run build",
     "test": "mocha --require babel-register --require ignore-styles test/**/*.spec.js -r ./test/setup.js --recursive",
-    "start": "budo example/index.js --css example/app.css --live -- -t [ babelify ]"
+    "start": "budo example/index.js --css example/app.css --live --  -p [ css-modulesify --after postcss-nested -o dist/main.css] -t [ babelify ]"
   },
   "peerDependencies": {
     "react": "^15.3.2",
     "react-transition-group": "^1.2.0",
     "prop-types": "^15.5.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",

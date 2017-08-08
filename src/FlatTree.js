@@ -1,5 +1,7 @@
 import React from 'react'
+import classNames from 'classnames'
 import Branch from './Branch'
+import styles from './FlatTree.css'
 
 class FlatTree extends React.Component {
 
@@ -13,8 +15,7 @@ class FlatTree extends React.Component {
   render() {
     // console.log(this.props)
     return (
-      <div className='explorer'>
-
+      <div className={classNames(styles.flatTree, this.props.className)}>
         { Object.keys(this.props.branches).map(k => this.renderBranch(k))}
       </div>
     );
