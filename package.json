@@ -1,5 +1,6 @@
 {
-  "author": "Nicolas Galler <nic@f1code.com>",
+  "author": "Results Theory",
+  "version": "1.0.1",
   "description": "Visual representation of a dynamically loaded tree with very long, flat branches",
   "keywords": [
     "react",
@@ -10,7 +11,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "jsnext:main": "src/index.js",
-  "name": "flat-tree",
+  "name": "react-flat-treeview",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nicocrm/flat-tree"
@@ -24,7 +25,6 @@
     "test": "mocha --require babel-register --require ignore-styles test/**/*.spec.js -r ./test/setup.js --recursive",
     "start": "budo example/index.js --css example/app.css --live -- -t [ babelify ]"
   },
-  "version": "1.0.0",
   "peerDependencies": {
     "react": "^15.3.2",
     "react-transition-group": "^1.2.0",
